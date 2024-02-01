@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <header className="bg-slate-800 text-white">
-          <ul className="flex justify-between items-center gap-2 p-4  mx-auto">
+          <ul className="flex justify-between items-center container gap-2 p-4  mx-auto">
             <li>
               <Link href="/" className="text-3xl">
                 Home
