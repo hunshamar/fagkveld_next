@@ -26,7 +26,7 @@ export default function RootLayout({
         <header className="bg-slate-800 text-white">
           <nav className="container mx-auto py-4 flex items-center justify-between">
             <Link href="/" className="text-3xl">
-              Postboy
+              Post app
             </Link>
 
             <div className="flex gap-2">
