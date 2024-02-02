@@ -16,27 +16,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      style={{
+        scrollbarGutter: "stable",
+      }}
+    >
       <body className={inter.className}>
         <header className="bg-slate-800 text-white">
-          <ul className="flex justify-between items-center container gap-2 p-4  mx-auto">
-            <li>
-              <Link href="/" className="text-3xl">
-                Home
-              </Link>
-            </li>
+          <nav className="container mx-auto py-4 flex items-center justify-between">
+            <Link href="/" className="text-3xl">
+              Postboy
+            </Link>
+
             <div className="flex gap-2">
-              <li>
-                <Link href="/posts">Posts</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
+              <Link href="/posts">Posts</Link>
+              <Link href="/about">About</Link>
             </div>
-          </ul>
+          </nav>
         </header>
 
-        <main className="p-4">{children}</main>
+        <main className="container mx-auto py-4">{children}</main>
       </body>
     </html>
   );

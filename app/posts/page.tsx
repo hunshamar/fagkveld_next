@@ -11,6 +11,10 @@ export type Post = {
 
 export default async function Page() {
   const { rows: posts } = await sql`SELECT * FROM posts ORDER BY id`;
+
+  // wait 500 ms
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-4">Posts</h1>

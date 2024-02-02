@@ -1,5 +1,6 @@
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
+import { SubmitButton } from "./submit-button";
 
 export function NewPostForm() {
   const createPostAction = async (formData: FormData) => {
@@ -45,12 +46,7 @@ export function NewPostForm() {
         />
       </div>
       <div>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-        >
-          Create post
-        </button>
+        <SubmitButton />
       </div>
     </form>
   );
